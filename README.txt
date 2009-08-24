@@ -6,9 +6,13 @@ a couple changes from Donut to build a mkbootimg that supports the
 "--base" argument. From your Android repository root, execute the following
 to cherry-pick the changes into your build:
 
-cd build
+pushd build
 git cherry-pick 1e0847c2fcbe1b95464f32a719d2b9e620d1e6ec
 git cherry-pick 6ea3b8856d656752c0310ca237ed99e7451be83b
+popd
+
+pushd system/core
+git cherry-pick 67eacb9affe645dea23c753fcca0776c33a5eb2a
 
 ---- easy setup method ----
 
