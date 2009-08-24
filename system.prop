@@ -1,0 +1,6 @@
+#
+# system.prop for dream
+#
+
+rild.libpath=/system/lib/libhtc_ril.so
+wifi.interface = tiwlan0

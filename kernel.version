@@ -1,0 +1,7 @@
+git://android.git.kernel.org/kernel/msm.git android-msm-htc-2.6.25
+
+commit c092738e01ab845dc7406dc1b53589b1f9edebbc
+Author: Brian Swetland <swetland@google.com>
+Date:   Thu Oct 9 18:31:07 2008 -0700
+
+    trout: update msm_defconfig to match dream/G1 1.0 configuration
