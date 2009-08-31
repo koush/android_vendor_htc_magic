@@ -61,8 +61,9 @@ for this to work.
 
 ---- creating an update.zip after building ----
 
-From the downloads section, you can get a mkupdatezip script (make sure that
-you also get the gen-update-script file as well). Put both of those scripts
-into your PATH. While in an Android build environment (you have run envsetup
-and lunch), simply type mkupdatezip. The resultant update.zip can then be
-found at out/target/product/$TARGET_PRODUCT/update.zip.
+Run the following from the root of your Android directory.
+
+TARGET_NO_RADIOIMAGE=true make otapackage
+
+The resultant update.zip can then be found at:
+out/target/product/$TARGET_PRODUCT/htc_magic-ota-eng.koush.zip
