@@ -1,25 +1,15 @@
----- setup requirements  ----
-
-The Magic uses HTC offsets for the kernel in the boot.img, and not the
-usual Google offsets. To build functional boot.img files, you must have
-a couple changes from Donut to build a mkbootimg that supports the 
-"--base" argument. From your Android repository root, execute the following
-to cherry-pick the changes into your build:
-
-pushd build
-git cherry-pick 1e0847c2fcbe1b95464f32a719d2b9e620d1e6ec
-git cherry-pick 6ea3b8856d656752c0310ca237ed99e7451be83b
-popd
-
-pushd system/core
-git cherry-pick 67eacb9affe645dea23c753fcca0776c33a5eb2a
-
 ---- easy setup method ----
 
 The preferred setup is by using a local_manifest.xml in your .repo
 directory. But if for some reason you don't want to do that, you can do the
 following.
 Starting from the root of your source tree, check out the project:
+
+pushd vendor/aosp
+git remote add koush git@github.com:koush/aosp.git
+git fetch koush
+git checkout -b koush koush/master
+popd
 
 cd vendor/htc
 git clone git://github.com/koush/magic-open.git magic-open
