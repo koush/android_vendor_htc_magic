@@ -5,6 +5,8 @@ directory. But if for some reason you don't want to do that, you can do the
 following.
 Starting from the root of your source tree, check out the project:
 
+# First let's grab the modifications to the aosp that make Magic
+# available in the lunch menu. 
 pushd vendor/aosp
 git remote add koush git@github.com:koush/aosp.git
 git fetch koush
@@ -41,7 +43,7 @@ You can configure to build for HTC Magic by setting
 your environment at the root of the source tree:
 
 . build/envsetup.sh
-lunch htc_magic-eng
+lunch aosp_magic_us-eng
 
 ---- proprietary files ----
 
