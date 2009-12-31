@@ -22,7 +22,7 @@ following.
 Starting from the root of your source tree, check out the project:
 
 cd vendor/htc
-git clone git://github.com/koush/platform_vendor_htc_magic-open.git magic-open
+git clone git://github.com/koush/magic-open.git magic-open
 # You may want to checkout the appropriate branch:
 # git checkout -b cupcake origin/cupcake
 # or 
