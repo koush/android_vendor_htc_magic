@@ -47,7 +47,7 @@ repo sync
 
 ---- build configuration ----
 
-You can configure to build for HTC Magicby setting
+You can configure to build for HTC Magic by setting
 your environment at the root of the source tree:
 
 . build/envsetup.sh
