@@ -47,12 +47,14 @@ lunch aosp_magic_us-eng
 
 ---- proprietary files ----
 
-The HTC Magic device includes a small number of proprietary binary 
-files that are necessary for Android to work correctly on it.
-
-They can be obtained from your Dream device by running the
-extract-files.sh script in this directory.  It will create the 
-proprietary subdirectory, and use adb (which will need to be in 
+The HTC Magic build requires a small number of proprietary binary 
+files that are necessary for Android to build a working image.
+They can be obtained from a Sapphire signed-google_ion-ota-14721.zip
+by running the unzip-files.sh script in this directory. 
+The zip can be found at:
+http://developer.htc.com/google-io-device.html#s3
+Place the zip file at the root of your Android repository and run the script.
+It will create the proprietary subdirectory, and use adb (which will need to be in 
 your path) to copy the files from your device.  You will need to
 enable USB Debugging (under Settings/Applications/Development)
 for this to work.
