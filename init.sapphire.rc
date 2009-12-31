@@ -1,6 +1,10 @@
 on early-init
     device mtd@misc 0460 radio diag
 
+# Set timeout value for rmnet stats.
+  write /sys/devices/virtual/net/rmnet0/timeout_suspend 5000000
+  write /sys/devices/virtual/net/rmnet0/timeout 18000000
+
 on boot
 # unmap left alt to avoid console switch
     setkey 0x0 0x38 0x0
@@ -28,9 +32,6 @@ on boot
     chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
     chmod 0660                /sys/class/rfkill/rfkill0/state
 
-on property:init.svc.wpa_supplicant=stopped
-    stop dhcpcd
-
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
     user compass
@@ -43,9 +44,9 @@ service wlan_loader /system/bin/wlan_loader \
     oneshot
 
 service wpa_supplicant /system/bin/wpa_supplicant \
-    -Dtiwlan0 -itiwlan0 -c/data/misc/wifi/wpa_supplicant.conf
+    -Dtiwlan0 -itiwlan0 -c/data/misc/wifi/wpa_supplicant.conf -q
     user wifi
-    group wifi inet
+    group wifi inet keystore
     socket wpa_tiwlan0 dgram 660 wifi wifi
     disabled
     oneshot
