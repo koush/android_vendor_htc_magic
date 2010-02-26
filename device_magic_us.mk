@@ -20,4 +20,4 @@ PRODUCT_COPY_FILES += \
         vendor/htc/magic-open/proprietary/AudioPara4.csv:system/etc/AudioPara4.csv \
 	vendor/htc/magic-open/proprietary/gps.conf_US:system/etc/gps.conf
 
-include vendor/htc/magic-open/device_magic.mk
+include vendor/htc/magic/device_magic.mk
