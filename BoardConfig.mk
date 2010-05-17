@@ -16,7 +16,7 @@ WIFI_DRIVER_MODULE_ARG      := ""
 WIFI_DRIVER_MODULE_NAME     := "wlan"
 WIFI_FIRMWARE_LOADER        := "wlan_loader"
 
-TARGET_BOOTLOADER_BOARD_NAME := magic
+TARGET_BOOTLOADER_BOARD_NAME := sapphire
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=null
 BOARD_KERNEL_BASE := 0x19200000
